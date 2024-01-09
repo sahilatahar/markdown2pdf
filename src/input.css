@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.preview ol {
+    list-style-type: decimal;
+}
+
+.preview ul {
+    list-style-type: disc;
+}
