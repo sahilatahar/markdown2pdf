@@ -1,7 +1,8 @@
-import CodeMirror from "@uiw/react-codemirror";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
-import { androidstudio } from "@uiw/codemirror-theme-androidstudio";
 import { languages } from "@codemirror/language-data";
+import { EditorView } from "@codemirror/view";
+import { androidstudio } from "@uiw/codemirror-theme-androidstudio";
+import CodeMirror from "@uiw/react-codemirror";
 import { useContext } from "react";
 import Context from "../context/ContextProvider";
 
@@ -18,8 +19,9 @@ function MdEditorComponent() {
         height="100%"
         extensions={[
           markdown([{ base: markdownLanguage, codeLanguages: languages }]),
+          EditorView.lineWrapping,
         ]}
-        className="h-full min-h-full text-base leading-6"
+        className="h-full min-h-full max-w-full text-base leading-6"
         autoFocus={true}
       />
     </div>
