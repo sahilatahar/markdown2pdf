@@ -31,13 +31,25 @@ function Greetings(){
 Greetings();
 \`\`\`
 
-or like this
-
 \`\`\`python
 # Sample: main.py
-def amazing(){
+def amazing():
     print('This is amazing!')
-}
-amazing();
+amazing()
 \`\`\`
+
+## Example Mermaid Diagram
+\`\`\`mermaid
+graph TD
+  Start --> Stop
+  Stop --> |Decision| End
+\`\`\`
+
+## Example LaTeX Math
+Inline math: $E = mc^2$
+
+Block math:
+\$\$
+c = \\pm\\sqrt{a^2 + b^2}
+\$\$
 `;

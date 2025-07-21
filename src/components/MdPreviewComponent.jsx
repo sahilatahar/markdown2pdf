@@ -5,6 +5,14 @@ import { useContext } from "react";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import Context from "../context/ContextProvider";
+import Mermaid from "./Mermaid";
+
+function extractText(node) {
+  if (typeof node === "string") return node;
+  if (Array.isArray(node)) return node.map(extractText).join("");
+  if (node?.props?.children) return extractText(node.props.children);
+  return "";
+}
 
 function MdPreviewComponent({ previewRef }) {
   const { text } = useContext(Context);
@@ -22,6 +30,17 @@ function MdPreviewComponent({ previewRef }) {
         }}
         remarkPlugins={[remarkMath]}
         rehypePlugins={[rehypeKatex]}
+        components={{
+          code: ({ children = [], className }) => {
+            const rawCode = extractText(children);
+
+            if (className?.includes("language-mermaid")) {
+              return <Mermaid chart={rawCode} />;
+            }
+
+            return <code className={className}>{children}</code>;
+          },
+        }}
         style={{ listStyleType: "disc" }}
       />
     </div>
