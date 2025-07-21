@@ -15,9 +15,12 @@
     "@uiw/codemirror-theme-androidstudio": "^4.21.21",
     "@uiw/react-codemirror": "^4.21.21",
     "@uiw/react-markdown-preview": "^5.0.7",
+    "katex": "^0.16.22",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

@@ -1,6 +1,9 @@
 import MarkdownPreview from "@uiw/react-markdown-preview";
+import "katex/dist/katex.min.css";
 import PropTypes from "prop-types";
 import { useContext } from "react";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 import Context from "../context/ContextProvider";
 
 function MdPreviewComponent({ previewRef }) {
@@ -17,6 +20,8 @@ function MdPreviewComponent({ previewRef }) {
         wrapperElement={{
           "data-color-mode": "light",
         }}
+        remarkPlugins={[remarkMath]}
+        rehypePlugins={[rehypeKatex]}
         style={{ listStyleType: "disc" }}
       />
     </div>
