@@ -12,7 +12,7 @@ function Markdown() {
   usePageEvents();
 
   return (
-    <div className="flex h-screen max-h-screen min-h-screen flex-col overflow-hidden print:h-auto print:max-h-none">
+    <div className="flex h-dvh max-h-dvh min-h-dvh flex-col overflow-hidden print:h-auto print:max-h-none">
       <Header />
       <section className="relative flex max-h-full flex-grow flex-row overflow-hidden">
         <MarkdownEditor />
