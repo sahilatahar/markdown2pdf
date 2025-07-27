@@ -12,9 +12,9 @@ function Markdown() {
   usePageEvents();
 
   return (
-    <div className="flex h-dvh max-h-dvh min-h-dvh flex-col overflow-hidden print:h-auto print:max-h-none">
-      <Header />
-      <section className="relative flex max-h-full flex-grow flex-row overflow-hidden">
+    <div className="flex flex-col overflow-hidden print:h-auto print:max-h-none">
+    <Header />
+    <section className="relative flex flex-grow flex-row overflow-hidden print:overflow-visible print:max-h-none print:h-auto">
         <MarkdownEditor />
         <MarkdownPreview previewRef={previewRef} />
       </section>
