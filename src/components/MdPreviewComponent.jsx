@@ -19,12 +19,12 @@ function MdPreviewComponent({ previewRef }) {
 
   return (
     <div
-      className="absolute left-0 top-0 max-h-full min-h-full w-full min-w-[50%] translate-x-full overflow-auto transition-transform duration-500 sm:static sm:w-[50%] sm:translate-x-0 print:w-full print:translate-x-0 print:overflow-hidden print:p-0"
+      className="absolute left-0 top-0 w-full min-w-[50%] translate-x-full transition-transform duration-500 sm:static sm:w-[50%] sm:translate-x-0 print:w-full print:translate-x-0 print:overflow-visible print:p-0 print:h-auto"
       ref={previewRef}
     >
       <MarkdownPreview
         source={text}
-        className="preview overflow-auto p-4 print:p-0"
+        className="preview overflow-auto p-2 print:p-2 print:h-auto print:overflow-visible"
         wrapperElement={{
           "data-color-mode": "light",
         }}
