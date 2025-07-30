@@ -49,8 +49,8 @@ function Header() {
   };
 
   const handleMarkdownSave = async () => {
-    const isConfirmed = confirm("Do you want to download the markdown?");
-    if (!isConfirmed) return;
+    // const isConfirmed = confirm("Do you want to download the markdown?");
+    // if (!isConfirmed) return;
     
     const filename = generateFileName(text);
     
